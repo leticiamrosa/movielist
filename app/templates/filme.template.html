@@ -1,0 +1,32 @@
+
+<!--<h1>{{ filme.titulo }}</h1>
+<button class="del" title="Excluir" ng-click="fnFechar()"></button>
+
+<ul>
+<li><strong>Ano:</strong> {{ filme.ano }}</li>
+<li><strong>Produtora:</strong> {{ filme.produtora }}</li>
+</ul>
+<p>{{ filme.sinopse }}</p> -->
+
+<div class="col s6 m12">
+
+  <div class="card horizontal">
+    <div class="card-image">
+      <img class="responsive-img" ng-if="filme.cartaz" ng-src="{{ filme.cartaz }}" alt="Cartaz {{ filme.titulo }}">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <button class="btn-floating red darken-1 right" title="Excluir" ng-click="fnFechar()">  <i class="small material-icons">delete_forever</i></button>
+        <h4 class="header">{{ filme.titulo }}</h4>
+        <hr>
+        <ul>
+          <li><h5><span class="sub-title">Ano:</span> {{ filme.ano }}</h5></li>
+          <li><h5><span class="sub-title">Produtora:</span> {{ filme.produtora }}</h5></li>
+        </ul>
+        <p>{{ filme.sinopse }}</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>

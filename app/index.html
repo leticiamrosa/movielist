@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="filmes">
+<head>
+  <meta charset="UTF-8">
+  <title>Filmes que já assisti</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/filmes.controller.js"></script>
+  <script src="scripts/filme.directive.js"></script>
+  <script src="scripts/filme.factory.js"></script>
+</head>
+<body ng-controller="FilmesController">
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12 center">
+        <h1>{{ titulo }}</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col m12 s12">
+        <form name="formulario" class="form-filmes" ng-submit="criarFilme()">
+          <h3>Adicionar Filme</h3>
+          <div class="form-campo">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" name="titulo" ng-model="novoFilme.titulo">
+          </div>
+          <div class="form-campo pequeno">
+            <label for="ano">Ano de Lançamento</label>
+            <input type="number" id="ano" name="ano" ng-model="novoFilme.ano">
+          </div>
+          <div class="form-campo medio">
+            <label for="produtora">Produtora</label>
+            <input type="text" id="produtora" name="produtora" ng-model="novoFilme.produtora">
+          </div>
+          <div class="form-campo">
+            <label for="cartaz">Url do Cartaz</label>
+            <input type="text" id="cartaz" name="cartaz" ng-model="novoFilme.cartaz">
+          </div>
+          <div class="form-campo">
+            <label for="sinopse">Sinópse</label>
+            <textarea id="sinopse" name="sinopse" ng-model="novoFilme.sinopse" rows="5"></textarea>
+            <div class="form-submit">
+              <button type="reset">Limpar</button>
+              <button type="submit">Salvar</button>
+            </div>
+          </div>
+        </form>
+        <hr />
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="background-color: #424242; padding: 50px; border-radius: 24px;">
+    <div class="row">
+      <div class="col s12 bg-subtitulo">
+        <h2 class="center">{{ subtitulo }}</h2>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col s12">
+
+          <div class="lista-filmes col-md-12 col-xs-6">
+            <div aw-filme="f" fn-fechar="removerFilme(f.id)" ng-repeat="f in filmes"></div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Hind:400,500,600,700|Montserrat:300,400,500,700,900);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 20px 200px;
+	background-color: #212121 !important;
+}
+
+h1 {
+	font-family: 'Hind', sans-serif;
+	font-size: 3em;
+	color: #00C853 !important;
+	font-weight: 700 !important;
+}
+
+h2 {
+	font-family: 'Hind', sans-serif;
+	font-size: 48px !important;
+	line-height: 72px !important;
+	color: #fff !important;
+	font-weight: 700 !important;
+}
+
+h3 {
+	font-family: 'Hind', sans-serif;
+	font-size: 40px !important;
+	line-height: 60px !important;
+	color: #4DB6AC !important;
+	font-weight: 700 !important;
+}
+
+h4 {
+	font-family: 'Hind', sans-serif;
+	font-size: 32px !important;
+	line-height: 48px !important;
+	font-weight: 700 !important;
+	color: #4DB6AC;
+}
+
+h5 {
+	font-family: 'Hind', sans-serif;
+	font-size: 24px !important;
+	line-height: 28.8px !important;
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px !important;
+	font-weight: 300 !important;
+	line-height: 19.2px !important;
+}
+.sub-title {
+	font-weight: 700 !important;
+}
+
+input, textarea {
+	display: block;
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+button {
+	display: inline-block;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+}
+
+.bg-subtitulo {
+	background-color: #FF3D00;
+	border-radius: 50px;
+}
+
+.btn-floating {
+	background-color: #FF3D00 !important;
+}
+
+.card-image {
+	padding: 8px 8px;
+}
+
+.card-image img {
+	border-radius: 16px !important;
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.form-filmes {
+	margin-top: 30px;
+	padding: 20px;
+	padding-bottom: 72px;
+	background-color: #fff;
+}
+
+.form-filmes h1 {
+	font-size: 2em;
+	margin-top: 0;
+}
+
+.form-filmes .form-campo {
+	margin-bottom: 10px;
+}
+
+.form-filmes .form-campo.pequeno input {
+	width: 100px;
+}
+
+.form-filmes .form-campo.medio input {
+	width: 50%;
+}
+
+.form-submit {
+	padding: 16px 16px !important;
+	margin-top: 8px;
+	float: right;
+}
+
+.form-filmes .form-campo label {
+	display: inline-block;
+	margin-bottom: 3px;
+}
+
+.form-filmes button[type="submit"] {
+		background-color: #FF3D00 !important;
+	color: #fff;
+}
+
+.form-filmes button[type="submit"]:hover {
+	background-color: #A0D468;
+}
+
+.form-filmes button[type="reset"] {
+	background-color: #AAB2BD;
+	color: #fff;
+}
+
+.form-filmes button[type="reset"]:hover {
+	background-color: #CCD1D9;
+}

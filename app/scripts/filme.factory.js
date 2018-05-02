@@ -19,6 +19,8 @@ movieApp.factory('MeusFilmes', function($q, $http){
       delete filme.id;
 
       return $http.put("https://movielist-e5fb8.firebaseio.com/filmes/" + id + ".json", filme);
-    }
+    },
+
+
   };
 });

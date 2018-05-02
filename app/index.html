@@ -14,8 +14,9 @@
   <script src="scripts/filmes.controller.js"></script>
   <script src="scripts/filme.directive.js"></script>
   <script src="scripts/filme.factory.js"></script>
+  <script src="scripts/dirPagination.js"></script>
 </head>
-<body ng-controller="FilmesController">
+<body ng-controller="FilmesController as vm">
 
   <div class="container">
     <div class="row">
@@ -66,16 +67,19 @@
         <h2 class="center">{{ subtitulo }}</h2>
       </div>
     </div>
-      <div class="row">
-        <div class="col s12">
+    <div class="row">
+      <div class="col s12">
 
-          <div class="lista-filmes col-md-12 col-xs-6">
-            <div aw-filme="f" fn-fechar="removerFilme(f.id)" ng-repeat="f in filmes"></div>
-          </div>
+        <div class="lista-filmes col-md-12 col-xs-6">
+          <div aw-filme="f" fn-fechar="removerFilme(f.id)" dir-paginate="f in filmes | itemsPerPage:5"></div>
+
         </div>
+        <!-- Pagination -->
+        <dir-pagination-controls class="center" direction-links="true" boundary-links="true" max-size="5" boundary-links="true"></dir-pagination-controls>
       </div>
-      <hr>
     </div>
+    <hr>
+  </div>
 
 
   <script
